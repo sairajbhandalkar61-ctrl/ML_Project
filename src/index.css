@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+/* Custom Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #EDE9DF;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.28);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #111111;
+}
+
+/* Film Grain Texture */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.042;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Vertical Slit-Scan / Raster Fringe Mask (Signature Reference Feature) */
+.slit-scan-mask-bottom {
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%),
+              repeating-linear-gradient(90deg, black 0px, black 3px, transparent 3px, transparent 6px);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.vertical-fringe-pattern {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0.85) 0px,
+    rgba(17, 17, 17, 0.85) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+}
+
+.vertical-fringe-pattern-dark {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(237, 233, 223, 0.85) 0px,
+    rgba(237, 233, 223, 0.85) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.text-huge-editorial {
+  font-size: clamp(2.5rem, 5.8vw, 6.8rem);
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+}
+
+.text-subhuge-editorial {
+  font-size: clamp(2rem, 4.5vw, 5.2rem);
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+}
+
+.hairline-b {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.22);
+}
+
+.hairline-t {
+  border-top: 1px solid rgba(17, 17, 17, 0.22);
+}
+
+.hairline-r {
+  border-right: 1px solid rgba(17, 17, 17, 0.22);
+}
+
+.hairline-l {
+  border-left: 1px solid rgba(17, 17, 17, 0.22);
+}
+
+.hairline-all {
+  border: 1px solid rgba(17, 17, 17, 0.22);
+}
+
+.dark-hairline-b {
+  border-bottom: 1px solid rgba(237, 233, 223, 0.18);
+}
+
+.dark-hairline-t {
+  border-top: 1px solid rgba(237, 233, 223, 0.18);
+}
+
+.dark-hairline-all {
+  border: 1px solid rgba(237, 233, 223, 0.18);
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-active {
+    cursor: none;
+  }
+  body.custom-cursor-active a,
+  body.custom-cursor-active button {
+    cursor: none;
+  }
+}
