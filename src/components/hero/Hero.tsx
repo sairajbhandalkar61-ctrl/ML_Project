@@ -3,6 +3,7 @@ import { ArrowDown, Sparkles, ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { profile } from '../../data/profile';
+import portraitImg from '../../assets/profile/sairaj_portrait.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,7 +128,7 @@ export const Hero: React.FC = () => {
             {/* Actual Portrait Image with Slit-Scan Raster Fringe */}
             <div className="relative w-full h-[calc(100%-28px)] overflow-hidden bg-[#111111]">
               <img
-                src="/assets/profile/sairaj_portrait.jpg"
+                src={portraitImg}
                 alt="Sairaj Bhandalkar in professional attire"
                 className="w-full h-full object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105"
                 loading="eager"

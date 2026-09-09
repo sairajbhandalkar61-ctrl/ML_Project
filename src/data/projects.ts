@@ -1,4 +1,5 @@
 import { Project } from '../types/portfolio';
+import skinnovaLogo from '../assets/projects/skinnova-logo.png';
 
 export const projects: Project[] = [
   {
@@ -49,7 +50,7 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/sairajbhandalkar61-ctrl/ML_Project",
     liveDemoUrl: "https://sairajbhandalkar61-ctrl.github.io/ML_Project/",
-    featuredImage: "/assets/projects/skinnova-logo.png",
+    featuredImage: skinnovaLogo,
     accentColor: "#E85D36",
     tags: ["Computer Vision", "Healthcare AI", "Longitudinal Tracking", "Deep Learning"]
   },

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { profile } from '../../data/profile';
+import portraitImg from '../../assets/profile/sairaj_portrait.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +59,7 @@ export const ProfileImage: React.FC = () => {
         <div className="relative w-full h-[60vh] sm:h-[75vh] max-h-[750px] overflow-hidden bg-[#1A1A18] border border-[#EDE9DF]/20 group">
           <img
             ref={imageRef}
-            src="/assets/profile/sairaj_portrait.jpg"
+            src={portraitImg}
             alt="Sairaj Bhandalkar — Editorial Full Portrait"
             className="w-full h-full object-cover object-top filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-700 ease-out"
             loading="lazy"

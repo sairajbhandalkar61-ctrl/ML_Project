@@ -74,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="./resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 py-1 px-3 hairline-all font-mono text-[11px] uppercase tracking-wider text-[#111111] hover:bg-[#111111] hover:text-[#EDE9DF] transition-all duration-200"
@@ -130,7 +130,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="./resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}

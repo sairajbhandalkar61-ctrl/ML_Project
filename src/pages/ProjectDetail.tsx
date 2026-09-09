@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ArrowLeft, ArrowUpRight, Github, ExternalLink, ShieldCheck } from 'lucide-react';
 import { projects } from '../data/projects';
 import { Footer } from '../components/layout/Footer';
+import skinnovaLogo from '../assets/projects/skinnova-logo.png';
 
 interface ProjectDetailProps {
   projectId: string;
@@ -62,7 +63,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onBack 
               <>
                 <div className="flex items-center justify-between">
                   <img
-                    src="/assets/projects/skinnova-logo.png"
+                    src={skinnovaLogo}
                     alt="Skinnova Logo"
                     className="h-12 sm:h-16 w-auto object-contain"
                   />

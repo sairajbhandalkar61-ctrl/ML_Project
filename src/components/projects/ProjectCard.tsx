@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Project } from '../../types/portfolio';
+import skinnovaLogo from '../../assets/projects/skinnova-logo.png';
 
 interface ProjectCardProps {
   project: Project;
@@ -95,7 +96,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenModal }
               <div className="relative w-full aspect-[16/10] bg-[#FFFFFF] hairline-all overflow-hidden p-6 flex flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <img
-                    src="/assets/projects/skinnova-logo.png"
+                    src={skinnovaLogo}
                     alt="Skinnova Clinical AI Logo"
                     className="h-10 sm:h-12 w-auto object-contain"
                   />
