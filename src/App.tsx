@@ -38,20 +38,22 @@ export function App() {
       setCurrentView(v);
     }
 
-    // Initialize smooth inertial momentum scrolling
+    // Initialize 144Hz-optimized smooth momentum scrolling
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 0.85,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       smoothWheel: true,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.2,
     });
 
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    const tickerUpdate = (time: number) => {
       lenis.raf(time * 1000);
-    });
-
+    };
+    gsap.ticker.add(tickerUpdate);
     gsap.ticker.lagSmoothing(0);
 
     // Hash navigation
@@ -61,15 +63,16 @@ export function App() {
         setTimeout(() => {
           const el = document.querySelector(hash);
           if (el) {
-            lenis.scrollTo(el as HTMLElement, { offset: -70, duration: 1.2 });
+            lenis.scrollTo(el as HTMLElement, { offset: -70, duration: 0.85 });
           }
-        }, 300);
+        }, 200);
       }
     };
     handleHash();
     window.addEventListener('hashchange', handleHash);
 
     return () => {
+      gsap.ticker.remove(tickerUpdate);
       lenis.destroy();
       window.removeEventListener('hashchange', handleHash);
     };

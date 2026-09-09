@@ -30,15 +30,29 @@ export const About: React.FC = () => {
 
           <div className="lg:col-span-5 space-y-6 pt-2 font-sans text-[#111111]/85 text-base sm:text-lg leading-relaxed">
             <p>
-              I am pursuing my <strong>Master of Computer Applications (MCA) in Data Science at MIT ADT University</strong> in Pune, India. My passion centers on transforming raw data into high-stakes automated decisions.
+              BCA graduate and <strong>MCA (Data Science) scholar at MIT ADT University</strong> with hands-on experience in Machine Learning, Deep Learning, Python Development, and Data Analysis. Skilled in Python, TensorFlow, Scikit-learn, OpenCV, SQL, NLP, and AI application development.
             </p>
             <p className="text-sm sm:text-base text-[#77736B]">
-              From exploratory data analysis and mathematical feature engineering to deep neural network inference, I construct the full pipeline — eliminating false optimism through disciplined uncertainty calibration and reproducible metrics.
+              Experienced in building ML models, data pipelines, and deploying intelligent solutions using Flask and Streamlit. Dedicated to building production-ready architectures from raw data to scalable real-time inference.
             </p>
 
-            <div className="pt-4 flex flex-wrap gap-2 font-mono text-[11px] uppercase tracking-wider text-[#111111]">
+            {/* Core Competencies */}
+            <div className="pt-2">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-[#77736B] block mb-2">
+                CORE COMPETENCIES // RESUME DOSSIER
+              </span>
+              <div className="flex flex-wrap gap-1.5 font-mono text-[10px] uppercase tracking-wider text-[#111111]">
+                {profile.coreCompetencies.map((comp) => (
+                  <span key={comp} className="px-2 py-1 bg-[#F4F1E9] hairline-all font-semibold">
+                    {comp}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-2 flex flex-wrap gap-1.5 font-mono text-[10px] uppercase tracking-wider text-[#77736B]">
               {profile.disciplines.map((d) => (
-                <span key={d} className="px-2.5 py-1 bg-[#F4F1E9] hairline-all">
+                <span key={d} className="px-2 py-0.5 border border-[#111111]/15">
                   {d}
                 </span>
               ))}

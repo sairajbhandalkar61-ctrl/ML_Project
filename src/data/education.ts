@@ -5,9 +5,9 @@ export const educationList: EducationItem[] = [
     id: "mit-adt",
     number: "01",
     institution: "MIT ADT UNIVERSITY",
-    degree: "MASTER OF COMPUTER APPLICATIONS",
+    degree: "MASTER OF COMPUTER APPLICATIONS (MCA)",
     specialization: "DATA SCIENCE",
-    period: "2026 — 2028",
+    period: "2024 — 2026",
     location: "PUNE, MAHARASHTRA",
     status: "Currently Pursuing"
   },
@@ -15,20 +15,19 @@ export const educationList: EducationItem[] = [
     id: "adarsh",
     number: "02",
     institution: "ADARSH MAHAVIDYALAYA, VITA",
-    degree: "BACHELOR OF COMPUTER APPLICATIONS",
-    specialization: "COMPUTER SCIENCE",
-    period: "JUNE 2022 — APRIL 2025",
-    location: "VITA, MAHARASHTRA",
-    status: "Completed"
-  },
-  {
-    id: "mit-wpu",
-    number: "03",
-    institution: "MIT WORLD PEACE UNIVERSITY",
-    degree: "BACHELOR OF COMPUTER APPLICATIONS",
-    specialization: "DATA SCIENCE",
+    degree: "BACHELOR OF COMPUTER APPLICATIONS (BCA)",
+    specialization: "CGPA: 7.6 / 10.0",
     period: "2022 — 2025",
-    location: "PUNE, MAHARASHTRA",
-    status: "Completed"
+    location: "VITA, MAHARASHTRA",
+    status: "Graduated"
   }
+];
+
+export const relevantCoursework = [
+  "Machine Learning",
+  "Deep Learning",
+  "Data Structures",
+  "Database Management Systems",
+  "Statistics",
+  "Data Analytics"
 ];

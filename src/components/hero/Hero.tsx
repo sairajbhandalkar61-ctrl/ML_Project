@@ -82,8 +82,9 @@ export const Hero: React.FC = () => {
         <div className="hidden sm:block">
           <span className="text-[#111111] font-semibold">INSTITUTE:</span> MIT ADT UNIVERSITY
         </div>
-        <div className="text-right">
-          <span className="text-[#111111] font-semibold">STATUS:</span> 2026 DOSSIER
+        <div className="text-right flex items-center justify-end gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-[#111111] font-semibold">STATUS:</span> IMMEDIATE JOINER
         </div>
       </div>
 
@@ -105,10 +106,10 @@ export const Hero: React.FC = () => {
           <div className="mt-8 pt-6 hairline-t max-w-xl">
             <p className="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#111111] font-medium flex items-center gap-3">
               <span className="inline-block w-2 h-2 rounded-full bg-accent-orange" />
-              <span>AI / ML • DATA SCIENCE • PYTHON</span>
+              <span>JUNIOR AI/ML DEVELOPER • PYTHON DEVELOPER • DATA SCIENCE</span>
             </p>
             <p className="mt-3 font-serif text-lg sm:text-xl text-[#77736B] italic">
-              “Engineering reproducible predictive intelligence and clinical computer vision from data.”
+              “Building intelligent ML models, clinical computer vision, and scalable AI solutions from data.”
             </p>
           </div>
         </div>

@@ -31,7 +31,7 @@ export const Education: React.FC = () => {
         </div>
 
         {/* Editorial Academic Spread */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {educationList.map((edu) => (
             <div
               key={edu.id}
@@ -61,6 +61,25 @@ export const Education: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Relevant Coursework Banner */}
+        <div className="p-6 bg-[#F4F1E9] hairline-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-accent-orange font-bold block mb-1">
+              FOUNDATIONAL CURRICULUM // RESUME AUDIT
+            </span>
+            <span className="font-serif text-xl sm:text-2xl font-light text-[#111111]">
+              RELEVANT COURSEWORK
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {["Machine Learning", "Deep Learning", "Data Structures", "Database Management Systems", "Statistics", "Data Analytics"].map((cw) => (
+              <span key={cw} className="px-3 py-1 bg-[#EDE9DF] hairline-all font-mono text-[11px] uppercase tracking-wider text-[#111111] font-medium">
+                {cw}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

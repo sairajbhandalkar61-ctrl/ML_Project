@@ -2,55 +2,52 @@ import { ExperienceItem } from '../types/portfolio';
 
 export const experiences: ExperienceItem[] = [
   {
-    id: "sevenmentor",
+    id: "bluestock",
     number: "01",
-    role: "DATA SCIENCE",
-    company: "SEVENMENTOR PVT LTD",
-    period: "JULY 2025 — JUNE 2026",
-    location: "PUNE DISTRICT, MAHARASHTRA",
-    type: "Intensive 1-Year Program",
-    description: "Successfully completed an intensive Data Science program covering Python, SQL, Statistics, Machine Learning, Data Analysis, and Data Visualization. Worked on real-world datasets involving data cleaning, preprocessing, exploratory data analysis (EDA), and feature engineering. Built machine learning models using Scikit-learn and Python for predictive analytics and business insights.",
+    role: "PYTHON DEVELOPER INTERN",
+    company: "BLUESTOCK FINTECH",
+    period: "FEB 2026 — MAR 2026",
+    location: "PUNE, MAHARASHTRA",
+    type: "Internship",
+    description: "Developed software solutions and application features using Python and modern development tools. Implemented business logic and automated workflows to improve application efficiency while collaborating via Git and GitHub following software development best practices.",
     technologies: [
       "Python",
-      "SQL",
-      "Statistics",
-      "Machine Learning",
-      "Scikit-learn",
-      "NumPy",
-      "Pandas",
-      "Matplotlib",
-      "Seaborn",
-      "Power BI",
-      "EDA",
-      "Feature Engineering"
+      "Git & GitHub",
+      "Automated Workflows",
+      "Business Logic",
+      "Software Architecture"
     ],
     deliverables: [
-      "Customer Segmentation: Built unsupervised K-Means and RFM clustering models on transactional data.",
-      "AI Monitoring Systems: Developed automated threshold tracking and anomaly detection algorithms.",
-      "Data Analytics Dashboards: Engineered Power BI business intelligence dashboards with automated DAX metrics.",
-      "End-to-end lifecycle collaboration from data ingestion to model deployment and evaluation."
+      "Developed software solutions and application features using Python and modern development tools.",
+      "Implemented business logic and automated workflows to improve application efficiency.",
+      "Collaborated using Git and GitHub while strictly following software development best practices."
     ]
   },
   {
-    id: "bluestock",
+    id: "sevenmentor",
     number: "02",
-    role: "SOFTWARE DEVELOPMENT ENGINEER INTERN",
-    company: "BLUESTOCK™",
-    period: "FEBRUARY 2026 — MARCH 2026",
-    location: "PUNE CITY, MAHARASHTRA",
-    type: "Internship (2 Months)",
-    description: "Engineered scalable software modules, integrated backend data services, and collaborated across agile engineering sprints to build robust software systems and data endpoints.",
+    role: "AI/ML ENGINEER TRAINEE",
+    company: "SEVENMENTOR PVT. LTD., PUNE",
+    period: "2025 — PRESENT",
+    location: "PUNE, MAHARASHTRA",
+    type: "Professional Traineeship",
+    description: "Built and optimized machine learning models using regression, classification, and clustering techniques. Performed data preprocessing, feature engineering, and exploratory data analysis on real-world datasets. Developed production-ready AI applications using TensorFlow, Keras, Flask, and Streamlit.",
     technologies: [
       "Python",
-      "Data Engineering",
-      "REST APIs",
-      "Git Workflow",
-      "Agile Architecture"
+      "TensorFlow",
+      "Keras",
+      "PyTorch",
+      "Scikit-learn",
+      "Flask",
+      "Streamlit",
+      "OpenCV",
+      "SQL",
+      "EDA & Preprocessing"
     ],
     deliverables: [
-      "Collaborated on production-grade software development pipelines.",
-      "Implemented modular services with thorough test coverage and automated linting.",
-      "Optimized data querying pipelines for improved backend throughput."
+      "Built and optimized machine learning models using regression, classification, and clustering techniques.",
+      "Performed data preprocessing, feature engineering, and exploratory data analysis (EDA) on real-world datasets.",
+      "Developed interactive AI applications deploying trained models via TensorFlow, Keras, Flask, and Streamlit."
     ]
   }
 ];

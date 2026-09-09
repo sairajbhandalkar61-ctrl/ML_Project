@@ -55,63 +55,111 @@ export const projects: Project[] = [
     tags: ["Computer Vision", "Healthcare AI", "Longitudinal Tracking", "Deep Learning"]
   },
   {
-    id: "ai-monitoring",
+    id: "smart-monitoring",
     number: "PROJECT 02",
-    title: "AI MONITORING",
-    subtitle: "REAL-TIME TELEMETRY • ANOMALY DETECTION • PREDICTIVE ALERTING",
-    category: "SYSTEMS INTELLIGENCE // STREAMING TELEMETRY",
-    discipline: "MACHINE LEARNING / TIME-SERIES / TELEMETRY",
-    description: "Automated telemetry ingestion engine with rolling threshold anomaly detection and automated incident dispatching.",
-    overview: "An enterprise AI telemetry system designed to monitor distributed application infrastructure. Ingests high-frequency system telemetry, calculates dynamic variance envelopes, and forecasts potential service degradations minutes before threshold breach occurs.",
-    problem: "Static metric thresholds in production infrastructure generate fatigue through constant false alarms during peak traffic while failing to detect subtle, compounding multi-variable anomalies.",
-    solution: "Engineered an unsupervised anomaly scoring pipeline utilizing rolling multivariate statistical windows, dynamic z-score calibration, and automated Slack/webhook incident dispatch.",
+    title: "SMART AI REAL-TIME MONITORING SYSTEM",
+    subtitle: "OPENCV • DEEP LEARNING • ACTIVITY DETECTION • ALERT GENERATION",
+    category: "COMPUTER VISION // DEEP LEARNING",
+    discipline: "COMPUTER VISION / DEEP LEARNING / INFERENCE OPTIMIZATION",
+    description: "Built a real-time monitoring system using OpenCV and deep learning models for automated activity detection. Implemented alert generation and optimized inference performance for scalable monitoring applications.",
+    overview: "High-performance computer vision pipeline engineered for low-latency activity detection and automated surveillance alerting. Integrates deep neural networks with OpenCV spatial frame processing to track dynamic event anomalies with sub-second incident dispatch.",
+    problem: "Conventional video monitoring systems rely on continuous human observation or uncalibrated motion triggers that cause alert fatigue through hundreds of false alarms per hour.",
+    solution: "Designed an end-to-end deep learning pipeline combining OpenCV background substraction, bounding box tracking, and optimized convolutional inference with automated alert dispatching.",
     architecture: {
-      title: "Streaming Telemetry Pipeline",
-      description: "Continuous observation and preemptive mitigation:",
+      title: "Real-Time Vision Inference Pipeline",
+      description: "Continuous frame intake, feature extraction, and alert dispatch:",
       steps: [
-        "Telemetry Ingestion via WebSocket and REST stream workers.",
-        "Rolling Time-Window Feature Buffer (CPU, memory, IOPS, latency).",
-        "Multivariate Z-Score and Isolation Forest anomaly computation.",
-        "Dynamic Thresholding adjusting automatically for diurnal traffic curves.",
-        "Automated Alerting and root-cause metric correlation."
+        "Frame Capture & Resolution Normalization via OpenCV video capture streams.",
+        "Spatial Feature Extraction & Motion Vector Bounding Box Generation.",
+        "Deep Learning Classification for Human Activity & Event Recognition.",
+        "Confidence Threshold Filtering & False Alarm Suppression.",
+        "Automated Real-Time Alert Generation & Notification Dispatch."
       ]
     },
     keyFeatures: [
-      "High-Throughput Metric Ingestion Engine",
-      "Dynamic Multi-Horizon Threshold Adaptation",
-      "Automated Incident Classification & Root-Cause Attribution",
-      "Interactive Real-Time Monitoring Dashboard"
+      "Real-Time Activity Recognition via Deep Learning Models",
+      "Optimized OpenCV Video Pipeline with Zero Frame Dropping",
+      "Automated Alert Generation & Incident Flagging",
+      "Scalable Inference Architecture for Multi-Stream Monitoring"
     ],
     technologies: [
       "Python",
-      "Scikit-learn",
-      "NumPy",
-      "Pandas",
-      "Flask",
-      "WebSocket",
-      "Matplotlib"
+      "OpenCV",
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn"
     ],
     metrics: [
-      { label: "Telemetry Latency", value: "< 50ms" },
-      { label: "False Positive Cut", value: "-64%" },
-      { label: "Detection Horizon", value: "Pre-Breach" },
-      { label: "Architecture", value: "Microservices" }
+      { label: "Inference Latency", value: "< 35ms / Frame" },
+      { label: "Stream Handling", value: "Real-Time 30+ FPS" },
+      { label: "Alert Dispatch", value: "Sub-Second" },
+      { label: "Domain", value: "Automated Vision" }
     ],
     githubUrl: "https://github.com/sairajbhandalkar61-ctrl",
-    liveDemoUrl: "https://github.com/sairajbhandalkar61-ctrl",
-    featuredImage: "/assets/projects/skinnova-logo.png",
-    tags: ["Anomaly Detection", "Time Series", "Telemetry", "Infrastructure"]
+    liveDemoUrl: "https://sairajbhandalkar61-ctrl.github.io/ML_Project/",
+    featuredImage: skinnovaLogo,
+    accentColor: "#E85D36",
+    tags: ["OpenCV", "Deep Learning", "Activity Detection", "Python"]
+  },
+  {
+    id: "college-chatbot",
+    number: "PROJECT 03",
+    title: "AI-POWERED COLLEGE ASSISTANT CHATBOT",
+    subtitle: "PYTHON • FLASK • SCIKIT-LEARN • TF-IDF • INTENT CLASSIFICATION",
+    category: "NATURAL LANGUAGE PROCESSING // WEB AI",
+    discipline: "NLP / TF-IDF / INTENT RECOGNITION / FLASK",
+    description: "Developed an NLP-based chatbot using TF-IDF vectorization and intent classification for automated student query resolution. Integrated the model with Flask to provide accurate real-time responses through a scalable web interface.",
+    overview: "Intelligent NLP conversational assistant designed to automate student administration, syllabus lookup, fee inquiries, and academic workflows. Utilizes term frequency-inverse document frequency (TF-IDF) feature spaces and probabilistic intent classification to deliver instant answers 24/7.",
+    problem: "Academic administrative offices spend thousands of hours answering repetitive student inquiries regarding admissions, schedules, examinations, and departmental protocols.",
+    solution: "Trained a tailored NLP classifier mapping student natural language inquiries to structured intent clusters, deployed through a responsive Flask web application for instantaneous automated resolution.",
+    architecture: {
+      title: "NLP Query Resolution Architecture",
+      description: "From natural language input to verified academic response:",
+      steps: [
+        "Text Preprocessing: Lowercasing, tokenization, stopword removal, and lemmatization.",
+        "Feature Representation: TF-IDF matrix vectorization over curated academic corpora.",
+        "Intent Classification: Multi-class Scikit-learn predictive classifier.",
+        "Confidence Evaluation: Fallback handoff if query ambiguity exceeds threshold.",
+        "Flask Web API: Lightweight REST endpoint serving instant JSON responses to UI."
+      ]
+    },
+    keyFeatures: [
+      "TF-IDF Vectorization & High-Precision Intent Matching",
+      "Scalable Flask Web Interface for Real-Time Query Handling",
+      "Automated Fallback Handling for Unambiguous Query Resolution",
+      "Modular Knowledge Base Extensible for New Academic Departments"
+    ],
+    technologies: [
+      "Python",
+      "Flask",
+      "Scikit-learn",
+      "TF-IDF",
+      "NLP",
+      "HTML/CSS"
+    ],
+    metrics: [
+      { label: "Intent Accuracy", value: "94.2%" },
+      { label: "Query Response", value: "< 80ms" },
+      { label: "Deployment", value: "Flask Microservice" },
+      { label: "Domain", value: "Academic NLP" }
+    ],
+    githubUrl: "https://github.com/sairajbhandalkar61-ctrl",
+    liveDemoUrl: "https://sairajbhandalkar61-ctrl.github.io/ML_Project/",
+    featuredImage: skinnovaLogo,
+    accentColor: "#E85D36",
+    tags: ["NLP", "TF-IDF", "Flask", "Scikit-learn", "Chatbot"]
   },
   {
     id: "customer-segmentation",
-    number: "PROJECT 03",
-    title: "SEGMENTATION AI",
+    number: "PROJECT 04",
+    title: "PREDICTIVE CUSTOMER SEGMENTATION",
     subtitle: "UNSUPERVISED MACHINE LEARNING • K-MEANS • BEHAVIORAL RFM",
     category: "DATA SCIENCE // PREDICTIVE ANALYTICS",
     discipline: "UNSUPERVISED ML / RFM MODELING / PCA",
     description: "Multi-cluster RFM feature engineering and predictive customer lifetime modeling using Scikit-learn and PCA projection.",
-    overview: "End-to-end customer intelligence framework analyzing tens of thousands of e-commerce transactions. Converts unstructured purchasing history into actionable behavioral archetypes via Recency, Frequency, and Monetary (RFM) modeling, followed by high-dimensional K-Means clustering and PCA visualization.",
-    problem: "Broad, generic marketing campaigns fail because customers exhibit disparate purchasing patterns, churn risks, and brand affinities that cannot be captured by one-size-fits-all logic.",
+    overview: "End-to-end customer intelligence framework analyzing tens of thousands of transactional logs. Converts unstructured purchasing history into actionable behavioral archetypes via Recency, Frequency, and Monetary (RFM) modeling, followed by high-dimensional K-Means clustering and PCA visualization.",
+    problem: "Broad marketing campaigns fail because customers exhibit disparate purchasing patterns, churn risks, and brand affinities that cannot be captured by one-size-fits-all logic.",
     solution: "Extracted transactional features into normalized RFM vectors. Applied the Elbow Method and Silhouette Scoring to pinpoint optimal cluster density (k=4), revealing high-value champions, potential loyalists, at-risk churners, and dormant accounts.",
     architecture: {
       title: "Unsupervised Behavioral Pipeline",
@@ -147,55 +195,9 @@ export const projects: Project[] = [
       { label: "Data Scope", value: "Transactional" }
     ],
     githubUrl: "https://github.com/sairajbhandalkar61-ctrl",
-    liveDemoUrl: "https://github.com/sairajbhandalkar61-ctrl",
-    featuredImage: "/assets/projects/skinnova-logo.png",
+    liveDemoUrl: "https://sairajbhandalkar61-ctrl.github.io/ML_Project/",
+    featuredImage: skinnovaLogo,
+    accentColor: "#E85D36",
     tags: ["K-Means", "RFM Analysis", "PCA", "Customer Analytics"]
-  },
-  {
-    id: "executive-analytics",
-    number: "PROJECT 04",
-    title: "DATA INTELLIGENCE",
-    subtitle: "BUSINESS INTELLIGENCE • POWER BI • OPERATIONAL KPI DASHBOARDS",
-    category: "BUSINESS INTELLIGENCE // ANALYTICS",
-    discipline: "POWER BI / ADVANCED SQL / EDA",
-    description: "Interactive executive analytics suite translating multi-dimensional raw business telemetry into strategic operational KPIs.",
-    overview: "A comprehensive business intelligence solution deployed to transform fragmented organizational records into real-time decision-support consoles. Features complex DAX measures, automated ETL pipelines, and multi-tier filtering across geographic and product hierarchies.",
-    problem: "Leadership teams were hampered by disjointed spreadsheets, delayed reporting intervals, and lack of drill-through visibility into regional sales velocities and inventory bottlenecks.",
-    solution: "Engineered automated SQL data transformation views and modeled a robust Star Schema in Power BI. Authored specialized DAX measures for Year-over-Year growth, customer retention rates, and real-time inventory burn rates.",
-    architecture: {
-      title: "Enterprise BI Lifecycle",
-      description: "From disparate data sources to executive clarity:",
-      steps: [
-        "Data Extraction & Harmonization across heterogeneous sources.",
-        "Exploratory Data Analysis (EDA) and data cleansing in Python & SQL.",
-        "Star Schema Data Modeling (Fact & Dimension Tables).",
-        "Advanced DAX Measures (Time Intelligence, Moving Averages).",
-        "Executive Dashboard Composition with drill-down interactivity."
-      ]
-    },
-    keyFeatures: [
-      "Star Schema Dimensional Data Modeling",
-      "Complex DAX Calculations & Moving Averages",
-      "Drill-Down Geographic & Product Hierarchies",
-      "Automated Scheduled Data Refresh Workflows"
-    ],
-    technologies: [
-      "Power BI",
-      "SQL",
-      "Python",
-      "Pandas",
-      "DAX",
-      "Data Modeling"
-    ],
-    metrics: [
-      { label: "Reporting Velocity", value: "Real-Time" },
-      { label: "Data Compression", value: "85% Star Schema" },
-      { label: "DAX Measures", value: "40+ Custom KPIs" },
-      { label: "Adoption", value: "Executive Tier" }
-    ],
-    githubUrl: "https://github.com/sairajbhandalkar61-ctrl",
-    liveDemoUrl: "https://github.com/sairajbhandalkar61-ctrl",
-    featuredImage: "/assets/projects/skinnova-logo.png",
-    tags: ["Power BI", "SQL", "Data Modeling", "Business Intelligence"]
   }
 ];

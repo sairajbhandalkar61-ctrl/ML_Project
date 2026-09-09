@@ -1,82 +1,108 @@
 import { SkillItem } from '../types/portfolio';
 
+export interface ResumeSkillCategory {
+  title: string;
+  skills: string[];
+}
+
+export const resumeSkillCategories: ResumeSkillCategory[] = [
+  {
+    title: "PROGRAMMING",
+    skills: ["Python", "SQL", "HTML", "CSS"]
+  },
+  {
+    title: "ML & AI ARCHITECTURES",
+    skills: ["Regression", "Classification", "Clustering", "ANN", "CNN", "NLP", "TF-IDF", "Feature Engineering", "Model Evaluation"]
+  },
+  {
+    title: "LIBRARIES & FRAMEWORKS",
+    skills: ["TensorFlow", "Keras", "PyTorch", "Scikit-learn", "OpenCV", "Flask", "Streamlit", "Pandas", "NumPy"]
+  },
+  {
+    title: "TOOLS & ENVIRONMENTS",
+    skills: ["Git", "GitHub", "Jupyter Notebook", "Google Colab", "VS Code", "MySQL"]
+  },
+  {
+    title: "DATA ANALYTICS",
+    skills: ["Data Cleaning", "Data Preprocessing", "EDA (Exploratory Data Analysis)", "Data Visualization", "Power BI"]
+  },
+  {
+    title: "CORE COMPETENCIES",
+    skills: ["Problem Solving", "Machine Learning Development", "Data Analysis", "Feature Engineering", "NLP", "Computer Vision", "Backend Development", "Team Collaboration"]
+  }
+];
+
 export const editorialSkills: SkillItem[] = [
   {
     name: "PYTHON",
     category: "CORE LANGUAGE",
-    description: "Object-oriented scripting, algorithmic computation, and production pipeline orchestration.",
-    tools: ["OOP", "Data Structures", "AsyncIO", "Automation"]
+    description: "Object-oriented scripting, algorithmic computation, and production AI application development.",
+    tools: ["Python 3.x", "Data Structures", "AsyncIO", "Automation"]
   },
   {
     name: "MACHINE LEARNING",
     category: "PREDICTIVE MODELING",
-    description: "Supervised and unsupervised architectures, cross-validation, regularization, and model evaluation.",
-    tools: ["Regression", "Classification", "Clustering", "Ensembles"]
+    description: "Supervised and unsupervised architectures, regression, classification, clustering, cross-validation, and model evaluation.",
+    tools: ["Regression", "Classification", "Clustering", "Feature Engineering"]
   },
   {
-    name: "DATA SCIENCE",
-    category: "LIFECYCLE EXPERTISE",
-    description: "Rigorous statistical inference, exploratory data analysis, hypothesis testing, and pipeline telemetry.",
-    tools: ["EDA", "Hypothesis Testing", "Data Cleansing", "Feature Engineering"]
+    name: "DEEP LEARNING & NEURAL NETS",
+    category: "DEEP ARCHITECTURES",
+    description: "Multi-layer perceptrons, Convolutional Neural Networks (CNNs), Artificial Neural Networks (ANNs), and transfer learning.",
+    tools: ["TensorFlow", "Keras", "PyTorch", "CNN / ANN"]
   },
   {
     name: "COMPUTER VISION",
     category: "IMAGE INTELLIGENCE",
-    description: "Spatial filtering, edge detection, contour analysis, and dermatological image processing.",
-    tools: ["OpenCV", "Convolutional Filters", "Segmentation", "Morphology"]
+    description: "Spatial filtering, edge detection, automated activity detection, and medical/dermatological image processing.",
+    tools: ["OpenCV", "Activity Detection", "Morphology", "Image Preprocessing"]
   },
   {
-    name: "NLP",
+    name: "NLP & TEXT ANALYTICS",
     category: "LANGUAGE PROCESSING",
-    description: "Syntactic parsing, tokenization, TF-IDF vectorization, intent classification, and embeddings.",
-    tools: ["Tokenization", "TF-IDF", "Intent Classification", "Text Processing"]
-  },
-  {
-    name: "GENERATIVE AI",
-    category: "MODERN FOUNDATIONS",
-    description: "Large language models, prompt engineering, structured multimodal reasoning, and RAG architectures.",
-    tools: ["LLMs", "RAG Systems", "Multimodal Reasoning", "API Integration"]
-  },
-  {
-    name: "PYTORCH",
-    category: "DEEP LEARNING",
-    description: "Deep neural network architectures, custom tensors, loss functions, and backpropagation mechanics.",
-    tools: ["ANN", "CNN", "Autograd", "Model Inference"]
+    description: "Intent classification, TF-IDF vectorization, tokenization, and query resolution chatbots.",
+    tools: ["TF-IDF", "Intent Classification", "NLTK", "Text Cleaning"]
   },
   {
     name: "SCIKIT-LEARN",
     category: "ML TOOLKIT",
-    description: "Production ML pipelines, feature scaling, GridSearch cross-validation, and metrics synthesis.",
-    tools: ["Pipelines", "PCA", "K-Means", "Random Forest"]
+    description: "Production ML pipelines, feature scaling, grid search cross-validation, and metrics evaluation.",
+    tools: ["Scikit-learn", "PCA", "K-Means", "Random Forest"]
   },
   {
-    name: "OPENCV",
-    category: "SPATIAL PROCESSING",
-    description: "Real-time image manipulation, bounding boxes, thresholding, and color-space transformations.",
-    tools: ["Adaptive Thresholding", "Color Spaces", "Feature Extraction"]
+    name: "FLASK & STREAMLIT",
+    category: "AI DEPLOYMENT",
+    description: "Rapid prototyping, interactive model deployment interfaces, and lightweight REST microservices.",
+    tools: ["Flask REST APIs", "Streamlit Apps", "Scalable Interfaces"]
+  },
+  {
+    name: "DATA ANALYTICS & EDA",
+    category: "ANALYTICS ENGINE",
+    description: "Data cleaning, preprocessing, exploratory data analysis, and business visualization dashboards.",
+    tools: ["Data Cleaning", "Preprocessing", "EDA", "Data Visualization"]
+  },
+  {
+    name: "SQL & DATABASES",
+    category: "DATA RELATIONS",
+    description: "Relational database queries, table joins, analytical filtering, and schema modeling.",
+    tools: ["MySQL", "SQL Queries", "Relational Joins", "Data Extraction"]
   },
   {
     name: "PANDAS & NUMPY",
     category: "VECTOR COMPUTATION",
-    description: "High-performance dataframe manipulation, vectorized operations, matrix decomposition, and time-series.",
-    tools: ["Vectorized Operations", "Data Wrangling", "Matrix Math", "Time Series"]
+    description: "High-performance dataframe manipulation, vectorized operations, and statistical aggregation.",
+    tools: ["Vectorized Math", "Data Wrangling", "Matrix Computing", "DataFrames"]
   },
   {
-    name: "SQL",
-    category: "DATA RELATIONS",
-    description: "Complex multi-table joins, analytical window functions, subqueries, and relational schema modeling.",
-    tools: ["Complex Joins", "Window Functions", "CTEs", "Schema Design"]
-  },
-  {
-    name: "FLASK & STREAMLIT",
-    category: "DEPLOYMENT & APPS",
-    description: "Rapid prototyping, interactive model demonstration interfaces, and lightweight REST microservices.",
-    tools: ["REST Endpoints", "Interactive Dashboards", "UI Deployment", "Webhooks"]
+    name: "TOOLS & VERSION CONTROL",
+    category: "DEVELOPER TOOLING",
+    description: "Collaborative Git/GitHub workflows, Jupyter Notebooks, Google Colab, and VS Code environments.",
+    tools: ["Git", "GitHub", "Jupyter", "Google Colab", "VS Code"]
   },
   {
     name: "POWER BI",
-    category: "EXECUTIVE REPORTING",
-    description: "Enterprise business intelligence consoles, DAX calculations, and interactive KPI visualizations.",
-    tools: ["DAX Formulations", "Star Schema", "Executive Dashboards", "KPI Reports"]
+    category: "BUSINESS INTELLIGENCE",
+    description: "Interactive data visualization reports, DAX calculations, and KPI tracking.",
+    tools: ["Power BI", "DAX", "Executive Reports", "Visual Analytics"]
   }
 ];

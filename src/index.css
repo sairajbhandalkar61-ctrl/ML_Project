@@ -6,6 +6,14 @@
   color-scheme: light;
 }
 
+/* 144Hz High-Refresh-Rate Compositing & Smooth Motion */
+html {
+  scroll-behavior: auto !important; /* Prevents browser interpolation collision with Lenis at 144Hz */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 /* Custom Editorial Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
@@ -21,7 +29,7 @@
   background: #111111;
 }
 
-/* Film Grain Texture */
+/* Film Grain Texture - Promoted to GPU Layer for Zero-Repaint 144Hz Scrolling */
 .film-grain {
   position: fixed;
   top: 0;
@@ -31,6 +39,9 @@
   pointer-events: none;
   z-index: 9999;
   opacity: 0.042;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
@@ -108,6 +119,18 @@
 
 .dark-hairline-all {
   border: 1px solid rgba(237, 233, 223, 0.18);
+}
+
+/* Hardware accelerated 144Hz utilities */
+.gpu-layer {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
 }
 
 /* Hide default cursor on desktop when custom cursor is active */

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { editorialSkills } from '../../data/skills';
+import { editorialSkills, resumeSkillCategories } from '../../data/skills';
 import { Sparkles, ArrowRight } from 'lucide-react';
 
 export const Skills: React.FC = () => {
@@ -119,6 +119,44 @@ export const Skills: React.FC = () => {
                 // GROUNDED IN SAIRAJ BHANDALKAR'S MCA RESEARCH
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Structured Technical Skills Matrix from Resume */}
+        <div className="pt-12 hairline-t space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent-orange font-semibold block mb-1">
+                STRUCTURED INVENTORY // OFFICIAL RESUME AUDIT
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#111111]">
+                TECHNICAL SKILLS ARCHITECTURE
+              </h3>
+            </div>
+            <span className="font-mono text-xs uppercase tracking-widest text-[#77736B]">
+              VERIFIED RESUME MATRIX
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {resumeSkillCategories.map((cat) => (
+              <div key={cat.title} className="p-6 bg-[#F4F1E9] hairline-all space-y-4">
+                <div className="flex items-center justify-between pb-2 border-b border-[#111111]/15 font-mono text-[10px] tracking-widest uppercase text-[#77736B]">
+                  <span className="text-[#111111] font-semibold">{cat.title}</span>
+                  <span>{cat.skills.length} MODULES</span>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {cat.skills.map((s) => (
+                    <span
+                      key={s}
+                      className="px-2.5 py-1 bg-[#EDE9DF] hairline-all font-mono text-[11px] text-[#111111] font-medium"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
